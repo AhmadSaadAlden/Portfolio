@@ -1,5 +1,5 @@
-import navbarTranslations from "./navbarTranslations.js";
-import homeTranslations from "./HomeTranslations.js";
+import navbarTranslations from "../../assets/js/navbarTranslations"
+import homeTranslations from "../../assets/js/HomeTranslations"
 
 const translations = {
     en: { ...navbarTranslations.en, ...homeTranslations.en, }, 

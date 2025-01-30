@@ -229,6 +229,7 @@ span{
 .setvices-box p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+    color: gray;
 }
 
 /*<============================== Portfolio ================================>*/
@@ -308,13 +309,50 @@ span{
     color: var(--second-bg-color);
 }
 
+
+/*<============================== skills ================================>*/
+.skills .heading {
+    margin-bottom: 4rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.skills-container .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+}
+
+.skills-container .images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.skills-container .images img:hover {
+    transform: scale(1.1); 
+}  
+
+
 /*<============================== contact ================================>*/
+.contact{
+    background-color: var(--second-bg-color);
+}
 
 .contact h2{
     margin-bottom: 3rem;
 }
 
 .contact form{
+    background-color: var(--bg-color);
     max-width: 70rem;
     margin: 1rem auto;
     text-align: center;
@@ -325,10 +363,13 @@ span{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 0.3rem;
+    
 }
 
 .contact form .input-box input,
 .contact form textarea{
+    background-color: var(--bg-color);
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -339,10 +380,12 @@ span{
 } 
 
 .contact form .input-box input{
+    background-color: var(--second-bg-color);
     width: 49%;
 }
 
 .contact form textarea{
+    background-color: var(--bg-color);
     resize: none;
 }
 
@@ -360,12 +403,13 @@ span{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text p{
     font-size: 1.6rem;
 }
+
 .footer-iconTop a{
     display: inline-flex;
     justify-content: center;
@@ -387,13 +431,14 @@ span{
 
 
 
-/* BREAKPOINTS */
+/*====================================== BREAKPOINTS ========================================*/
 
 @media (max-width: 1200px){
     html{
         font-size: 55%;
     }
 }
+
 
 @media (max-width: 991px){
     .header{
@@ -422,6 +467,7 @@ span{
 }
 
 
+
 @media (max-width: 768px){
     #menu-icon{
         display: block;
@@ -448,6 +494,7 @@ span{
 
     .home{
         flex-direction: column;
+        overflow-x: hidden;
     }
     .home-content h3{
         font-size: 2.6rem;
@@ -464,6 +511,7 @@ span{
 
     .about{
         flex-direction: column-reverse;
+        overflow-x: hidden;
     }
 
     .about img{
@@ -482,13 +530,26 @@ span{
     .portfolio-container{
         grid-template-columns: repeat(2, 1fr);
     }
+    
 }
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        overflow-x: hidden; 
+    }
+}
+
+
 
 @media (max-width: 617px){
     .portfolio-container{
         grid-template-columns: 1fr;
     }
 }
+
+
 
 @media (max-width: 450px){
     html{
@@ -498,11 +559,13 @@ span{
     .contact form .input-box input{
         width: 100%;
     }
+
     .footer{
         flex-direction: column-reverse;
     }
-
 }
+
+
 
 @media (max-width: 365px){
     .home-img img{

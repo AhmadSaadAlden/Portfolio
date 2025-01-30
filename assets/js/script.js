@@ -1,4 +1,3 @@
-import translations from "./translations.js";
 
 /*==================== toggle icon navbar ====================*/
 let menuIcon = document.querySelector('#menu-icon');
@@ -27,7 +26,6 @@ window.onscroll = () => {
             })
         }
     })
-
 
     /*==================== sticky navbar ====================*/
     let header = document.querySelector('header')
